@@ -2,6 +2,10 @@ import os
 import requests
 import zipfile
 import io
+import shutil
+
+# copy fonts due to upstream changes in the repo
+shutil.copytree("Extras", "Ligaturizer/fonts/fira/distr/otf", dirs_exist_ok=True)
 
 # URL of the latest release
 url = "https://github.com/ryanoasis/nerd-fonts/releases/latest/download/FontPatcher.zip"
